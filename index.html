@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="style.css">
+  <title></title>
+</head>
+<div id="inputPanel">
+  <h3><img id="story" src="story.jpg" alt=""></h3>
+  <p>City:
+    <input id="city" type="text" placeholder="city">
+  </p>
+  <p>Least favorite food:
+    <input id="leasfavfood" type="text" placeholder="least favorite food">
+  </p>
+  <p>Weather:
+    <input id="weather" type="text" placeholder="weather">
+  </p>
+  <p>Adjective:
+    <input id="adj" type="text" placeholder="adjective">
+  </p>
+  <p>Animal:
+    <input id="animal" type="text" placeholder="animal">
+  </p>
+  <p>Adjective:
+    <input id="adj2" type="text" placeholder="adjective2">
+  </p>
+  <p>Object:
+    <input id="object" type="text" placeholder="object">
+  </p>
+  <p>Verb:
+    <input id="verb" type="text" placeholder="verb">
+  </p>
+  <p>Body Part:
+    <input id="body" type="text" placeholder="body part">
+  </p>
+  <p>Restaurant :
+    <input id="rest" type="text" placeholder="restaurant">
+  </p>
+  <p>Plural Noun:
+    <input id="plural" type="text" placeholder="plural noun">
+  </p>
+
+  <button id="submit">Submit</button>
+  <p id="warning">Leave no question behind</p>
+
+</div>
+<div id="outputPanel">
+  <p>Results..</p>
+  <p id="theStory">Cool Story Bro</p>
+  <button id="again">Again?</button>
+</div>
+<script>
+  const inputPanel = document.querySelector("#inputPanel");
+  const outputPanel = document.querySelector("#outputPanel");
+  const warning = document.querySelector("#warning");
+
+  const submit = document.querySelector("#submit");
+  submit.addEventListener("click", writeStory, false);
+
+  const again = document.querySelector("#again");
+  again.addEventListener("click", resetPage, false);
+
+  document.querySelector('#city').focus();
+
+  const city = document.querySelector('#city');
+  const leasfavfood = document.querySelector("#leasfavfood");
+  const weather = document.querySelector('#weather');
+  const adj = document.querySelector('#adj');
+  const animal = document.querySelector('#animal');
+  const adj2 = document.querySelector('#adj2');
+  const object = document.querySelector('#object');
+  const verb = document.querySelector('#verb');
+  const body = document.querySelector('#body');
+  const rest = document.querySelector('#rest');
+  const plural = document.querySelector('#plural');
+  const theStory = document.querySelector("#theStory");
+
+  window.addEventListener("keydown", keydownHandler, false);
+
+  function keydownHandler(event) {
+    console.log("Enter key pressed");
+
+  }
+
+  function checkComplete() {
+    //verify the user filled in the form
+
+  }
+
+  function writeStory() {
+    //grab the input values to write the story
+
+  }
+
+  function resetPage() {
+    //put stuff here to reset the page so the user can try again
+
+  }
+</script>
+
+</html>

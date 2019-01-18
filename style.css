@@ -1,0 +1,26 @@
+body {
+  background-image: url(madbak.jpg);
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+p {
+  text-align: center;
+}
+
+h3 {
+  text-align: center;
+}
+
+#story {
+  width: 20%;
+  height: 20%;
+}
+
+#submit, #again {
+  margin: 0 auto;
+  display: block;
+  text-align: center;
+}
