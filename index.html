@@ -12,7 +12,7 @@
     <input id="city" type="text" placeholder="city">
   </p>
   <p>Least favorite food:
-    <input id="leasfavfood" type="text" placeholder="least favorite food">
+    <input id="leastfavfood" type="text" placeholder="least favorite food">
   </p>
   <p>Weather:
     <input id="weather" type="text" placeholder="weather">
@@ -91,6 +91,19 @@
 
   function writeStory() {
     //grab the input values to write the story
+    let story = "This story takes place in "
+    story += city.value
+    story += ". There was a ripe young " + leastfavfood.value + " . Relaxing on a " + weather.value + " day. "
+    story += " When all of a sudden a giant " + adj.value
+    story += animal.value + " started running at it! " + " The " + adj2.value + " youngling needed to defend itself so it picked up the nearest thing which was a "
+    story += object.value + " . As the creature came closer, the youngling started to " + verb.value
+    story += ". The youngling was not quick enough and the creature ate it's " + body.value + ". The creature did not like the taste and spit it out. Sorry about that, it said. How about I take you to " + rest.value + " it's my treat."
+    story += " Then they became best " + plural.value
+
+
+    theStory.innerHTML = story
+
+    if 
 
   }
 
