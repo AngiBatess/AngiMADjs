@@ -24,6 +24,13 @@ h3 {
 #story {
   width: 40%;
   height: 40%;
+
+}
+
+#theStory {
+  margin: 0 auto;
+  display: block;
+  text-align: center;
 }
 
 #submit, #again {
