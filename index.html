@@ -67,7 +67,7 @@
   document.querySelector('#city').focus();
 
   const city = document.querySelector('#city');
-  const leasfavfood = document.querySelector("#leasfavfood");
+  const leastfavfood = document.querySelector("#leastfavfood");
   const weather = document.querySelector('#weather');
   const adj = document.querySelector('#adj');
   const animal = document.querySelector('#animal');
@@ -97,52 +97,52 @@
 
   function checkComplete() {
     //verify the user filled in the form
-    removeBlueBG()
+    removebgBlue()
     if (city.value == "") {
       //  warning.className = "displayBlock"
-       favColor.className = "bgBlue"
+      city.className = "bgBlue"
     }
-    if (leasfavfood.value == "") {
+    if (leastfavfood.value == "") {
       //warning.className = "displayBlock"
-      favColor.className = "bgBlue"
+      leastfavfood.className = "bgBlue"
     }
     if (weather.value == "") {
       //warning.className = "displayBlock"
-      favColor.className = "bgBlue"
+      weather.className = "bgBlue"
     }
     if (adj.value == "") {
       //warning.className = "displayBlock"
-      favColor.className = "bgBlue"
+      adj.className = "bgBlue"
     }
     if (animal.value == "") {
       //warning.className = "displayBlock"
-      favColor.className = "bgBlue"
+      animal.className = "bgBlue"
     }
     if (adj2.value == "") {
       //warning.className = "displayBlock"
-      favColor.className = "bgBlue"
+      adj2.className = "bgBlue"
     }
     if (object.value == "") {
       //warning.className = "displayBlock"
-      favColor.className = "bgBlue"
+      object.className = "bgBlue"
     }
     if (verb.value == "") {
       //warning.className = "displayBlock"
-      favColor.className = "bgBlue"
+      verb.className = "bgBlue"
     }
     if (body.value == "") {
       //warning.className = "displayBlock"
-      favColor.className = "bgBlue"
+      body.className = "bgBlue"
     }
     if (rest.value == "") {
       //warning.className = "displayBlock"
-      favColor.className = "bgBlue"
+      rest.className = "bgBlue"
     }
     if (plural.value == "") {
       //warning.className = "displayBlock"
-      favColor.className = "bgBlue"
+      plural.className = "bgBlue"
     }
-    if (city.value == "" || leastfavfood.value == "" || weather.value == "" || adj.value == "" || animal.value == "" || adj2.value == "" || object.value == "" || verb.value == "" || body.value == "" || rest.value == "" || plural.value == "" || ) {
+    if (city.value == "" || leastfavfood.value == "" || weather.value == "" || adj.value == "" || animal.value == "" || adj2.value == "" || object.value == "" || verb.value == "" || body.value == "" || rest.value == "" || plural.value == "" ) {
       warning.className = "displayBlock"
       return false
     } else {
@@ -166,15 +166,15 @@
     // story += ". The youngling was not quick enough and the creature ate it's " + body.value + ". The creature did not like the taste and spit it out. Sorry about that, it said. How about I take you to " + rest.value + " it's my treat."
     // story += " Then they became best " + plural.value
 
-    const storyText1 = "This story takes place in" + city.value + ". "
-    const storyText2 = "There was a ripe young" + leasfavfood.value + ". "
+    const storyText1 = "This story takes place in " + city.value + ". "
+    const storyText2 = "There was a ripe young " + leastfavfood.value + ". "
     const storyText3 = "Relaxing on a " + weather.value + " day. "
     const storyText4 = "When all of a sudden a giant " + adj.value
     const storyText5 = "" + animal.value + " started running at it! "
     const storyText6 = "The " + adj2.value
     const storyText7 = " youngling needed to defend itself so it picked up the nearest things which was a " + object.value + ". "
     const storyText8 = "As the creature came closer, the youngling started to " + verb.value + ". "
-    const storyText9 = "The youngling was not quick enough and the creature ate it's" + body.value + ". "
+    const storyText9 = "The youngling was not quick enough and the creature ate it's " + body.value + ". "
     const storyText10 = "The creature did not like the taste and spit it out. Sorry about that, it said. How about I take you to " + rest.value + ". It's my treat. "
     const storyText11 = "Then they became best " + plural.value + "."
 
@@ -234,18 +234,19 @@
     addTextNode(storyText9)
     addTextNode(storyText10)
     addTextNode(storyText11)
-        //theStory.innerHTML = story
+    //theStory.innerHTML = story
 
     inputPanel.className = "displayNone"
     outputPanel.className = "displayBlock"
     warning.className = "displayNone"
 
   }
-  function addTextNode(text){
+
+  function addTextNode(text) {
     const newP = document.createElement('p')
     const newT = document.createTextNode(text)
-    newP.appenChild(newT)
-    theStory.appenChild(newP)
+    newP.appendChild(newT)
+    theStory.appendChild(newP)
   }
 
   function resetPage() {
@@ -254,7 +255,7 @@
     warning.className = "displayNone"
 
     city.value = ""
-    leasfavfood.value = ""
+    leastfavfood.value = ""
     weather.value = ""
     adj.value = ""
     animal.value = ""
@@ -266,26 +267,26 @@
     plural.value = ""
     theStory.innerHTML = ""
 
-    removeBlueBG()
+    removebgBlue()
     theStory.innerHTML = ""
     city.focus()
     //put stuff here to reset the page so the user can try again
   }
-function removeBlueBG(){
-  city.classList.remove('bgBlue')
-  leasfavfood.classList.remove('bgBlue')
-  weather.classList.remove('bgBlue')
-  adj.classList.remove('bgBlue')
-  animal.classList.remove('bgBlue')
-  adj2.classList.remove('bgBlue')
-  object.classList.remove('bgBlue')
-  verb.classList.remove('bgBlue')
-  body.classList.remove('bgBlue')
-  rest.classList.remove('bgBlue')
-  plural.classList.remove('bgBlue')
-  theStory.classList.remove('bgBlue')
-}
 
+  function removebgBlue() {
+    city.classList.remove('bgBlue')
+    leastfavfood.classList.remove('bgBlue')
+    weather.classList.remove('bgBlue')
+    adj.classList.remove('bgBlue')
+    animal.classList.remove('bgBlue')
+    adj2.classList.remove('bgBlue')
+    object.classList.remove('bgBlue')
+    verb.classList.remove('bgBlue')
+    body.classList.remove('bgBlue')
+    rest.classList.remove('bgBlue')
+    plural.classList.remove('bgBlue')
+    theStory.classList.remove('bgBlue')
+  }
 </script>
 
 </html>
