@@ -4,6 +4,8 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  border-style: dotted;
+  border-color: black;
 }
 
 p {
@@ -15,6 +17,7 @@ p {
 
 h3 {
   text-align: center;
+
 }
 
 .displayBlock{
@@ -30,9 +33,9 @@ h3 {
 
 }
 
-#warning { background-color: red;}
+#warning { background-color: rgb(250, 242, 101);}
 
-.bgBlue {background-color: blue;}
+.bgBlue {background-color: rgb(161, 250, 244);}
 
 #theStory {
   margin: 0 auto;
