@@ -48,7 +48,7 @@
 </div>
 <div id="outputPanel">
   <p>Results..</p>
-  <p id="theStory">Cool Story Bro</p>
+  <section id="theStory"></section>
   <button id="again">Again?</button>
 </div>
 <script>
@@ -58,9 +58,11 @@
 
   const submit = document.querySelector("#submit");
   submit.addEventListener("click", writeStory, false);
+  submit.style.cursor = "pointer"
 
   const again = document.querySelector("#again");
   again.addEventListener("click", resetPage, false);
+  again.style.cursor = "pointer"
 
   document.querySelector('#city').focus();
 
@@ -79,41 +81,210 @@
 
   window.addEventListener("keydown", keydownHandler, false);
 
-  function keydownHandler(event) {
-    console.log("Enter key pressed");
+  inputPanel.className = "displayBlock"
+  outputPanel.className = "displayNone"
+  warning.className = "displayNone"
 
+  city.focus()
+
+  function keydownHandler(event) {
+    if (event.keyCode === 13) {
+      //ascii keycode
+      console.log("Enter key pressed");
+      writeStory()
+    }
   }
 
   function checkComplete() {
     //verify the user filled in the form
+    if (city.value == "") {
+      //  warning.className = "displayBlock"
+       favColor.className = "bgBlue"
+    }
+    if (leasfavfood.value == "") {
+      //warning.className = "displayBlock"
+      favColor.className = "bgBlue"
+    }
+    if (weather.value == "") {
+      //warning.className = "displayBlock"
+      favColor.className = "bgBlue"
+    }
+    if (adj.value == "") {
+      //warning.className = "displayBlock"
+      favColor.className = "bgBlue"
+    }
+    if (animal.value == "") {
+      //warning.className = "displayBlock"
+      favColor.className = "bgBlue"
+    }
+    if (adj2.value == "") {
+      //warning.className = "displayBlock"
+      favColor.className = "bgBlue"
+    }
+    if (object.value == "") {
+      //warning.className = "displayBlock"
+      favColor.className = "bgBlue"
+    }
+    if (verb.value == "") {
+      //warning.className = "displayBlock"
+      favColor.className = "bgBlue"
+    }
+    if (body.value == "") {
+      //warning.className = "displayBlock"
+      favColor.className = "bgBlue"
+    }
+    if (rest.value == "") {
+      //warning.className = "displayBlock"
+      favColor.className = "bgBlue"
+    }
+    if (plural.value == "") {
+      //warning.className = "displayBlock"
+      favColor.className = "bgBlue"
+    }
+    if (city.value == "" || leastfavfood.value == "" || weather.value == "" || adj.value == "" || animal.value == "" || adj2.value == "" || object.value == "" || verb.value == "" || body.value == "" || rest.value == "" || plural.value == "" || ) {
+      warning.className = "displayBlock"
+      return false
+    } else {
+      return true
+    }
 
   }
 
   function writeStory() {
     //grab the input values to write the story
-    let story = "This story takes place in "
-    story += city.value
-    story += ". There was a ripe young " + leastfavfood.value + " . Relaxing on a " + weather.value + " day. "
-    story += " When all of a sudden a giant " + adj.value
-    story += animal.value + " started running at it! " + " The " + adj2.value + " youngling needed to defend itself so it picked up the nearest thing which was a "
-    story += object.value + " . As the creature came closer, the youngling started to " + verb.value
-    story += ". The youngling was not quick enough and the creature ate it's " + body.value + ". The creature did not like the taste and spit it out. Sorry about that, it said. How about I take you to " + rest.value + " it's my treat."
-    story += " Then they became best " + plural.value
+    if (checkComplete() == false) {
+      return
+    }
 
+    // let story = "This story takes place in "
+    // story += city.value
+    // story += ". There was a ripe young " + leastfavfood.value + " . Relaxing on a " + weather.value + " day. "
+    // story += " When all of a sudden a giant " + adj.value
+    // story += animal.value + " started running at it! " + " The " + adj2.value + " youngling needed to defend itself so it picked up the nearest thing which was a "
+    // story += object.value + " . As the creature came closer, the youngling started to " + verb.value
+    // story += ". The youngling was not quick enough and the creature ate it's " + body.value + ". The creature did not like the taste and spit it out. Sorry about that, it said. How about I take you to " + rest.value + " it's my treat."
+    // story += " Then they became best " + plural.value
 
-    theStory.innerHTML = story
-    
-    outputPanel.className = "displayBlock"
+    const storyText1 = "This story takes place in" + city.value + ". "
+    const storyText2 = "There was a ripe young" + leasfavfood.value + ". "
+    const storyText3 = "Relaxing on a " + weather.value + " day. "
+    const storyText4 = "When all of a sudden a giant " + adj.value
+    const storyText5 = "" + animal.value + " started running at it! "
+    const storyText6 = "The " + adj2.value
+    const storyText7 = " youngling needed to defend itself so it picked up the nearest things which was a " + object.value + ". "
+    const storyText8 = "As the creature came closer, the youngling started to " + verb.value + ". "
+    const storyText9 = "The youngling was not quick enough and the creature ate it's" + body.value + ". "
+    const storyText10 = "The creature did not like the taste and spit it out. Sorry about that, it said. How about I take you to " + rest.value + ". It's my treat. "
+    const storyText11 = "Then they became best " + plural.value + "."
+
+    // const newP1 = document.createElement('p')
+    // const newP2 = document.createElement('p')
+    // const newP3 = document.createElement('p')
+    // const newP4 = document.createElement('p')
+    // const newP5 = document.createElement('p')
+    // const newP6 = document.createElement('p')
+    // const newP7 = document.createElement('p')
+    // const newP8 = document.createElement('p')
+    // const newP9 = document.createElement('p')
+    // const newP10 = document.createElement('p')
+    // const newP11 = document.createElement('p')
+    //
+    // const newT1 = document.createTextNode(storyText1)
+    // const newT2 = document.createTextNode(storyText2)
+    // const newT3 = document.createTextNode(storyText3)
+    // const newT4 = document.createTextNode(storyText4)
+    // const newT5 = document.createTextNode(storyText5)
+    // const newT6 = document.createTextNode(storyText6)
+    // const newT7 = document.createTextNode(storyText7)
+    // const newT8 = document.createTextNode(storyText8)
+    // const newT9 = document.createTextNode(storyText9)
+    // const newT10 = document.createTextNode(storyText10)
+    // const newT11 = document.createTextNode(storyText11)
+    // newP1.appenChild(newP1)
+    // newP2.appenChild(newP2)
+    // newP3.appenChild(newP3)
+    // newP4.appenChild(newP4)
+    // newP5.appenChild(newP5)
+    // newP6.appenChild(newP6)
+    // newP7.appenChild(newP7)
+    // newP8.appenChild(newP8)
+    // newP9.appenChild(newP9)
+    // newP10.appenChild(newP10)
+    // newP11.appenChild(newP11)
+    // theStory.appenChild(newP1)
+    // theStory.appenChild(newP2)
+    // theStory.appenChild(newP3)
+    // theStory.appenChild(newP4)
+    // theStory.appenChild(newP5)
+    // theStory.appenChild(newP6)
+    // theStory.appenChild(newP7)
+    // theStory.appenChild(newP8)
+    // theStory.appenChild(newP9)
+    // theStory.appenChild(newP10)
+    // theStory.appenChild(newP11)
+    addTextNode(storyText1)
+    addTextNode(storyText2)
+    addTextNode(storyText3)
+    addTextNode(storyText4)
+    addTextNode(storyText5)
+    addTextNode(storyText6)
+    addTextNode(storyText7)
+    addTextNode(storyText8)
+    addTextNode(storyText9)
+    addTextNode(storyText10)
+    addTextNode(storyText11)
+        //theStory.innerHTML = story
+
     inputPanel.className = "displayNone"
+    outputPanel.className = "displayBlock"
+    warning.className = "displayNone"
 
+  }
+  function addTextNode(text){
+    const newP = document.createElement('p')
+    const newT = document.createTextNode(text)
+    newP.appenChild(newT)
+    theStory.appenChild(newP)
   }
 
   function resetPage() {
     outputPanel.className = "displayNone"
     inputPanel.className = "displayBlock"
-    //put stuff here to reset the page so the user can try again
+    warning.className = "displayNone"
 
+    city.value = ""
+    leasfavfood.value = ""
+    weather.value = ""
+    adj.value = ""
+    animal.value = ""
+    adj2.value = ""
+    object.value = ""
+    verb.value = ""
+    body.value = ""
+    rest.value = ""
+    plural.value = ""
+    theStory.innerHTML = ""
+
+    removeBlueBG()
+    theStory.innerHTML = ""
+    city.focus()
+    //put stuff here to reset the page so the user can try again
   }
+function removeBlueBG(){
+  city.classList.remove('bgBlue')
+  leasfavfood.classList.remove('bgBlue')
+  weather.classList.remove('bgBlue')
+  adj.classList.remove('bgBlue')
+  animal.classList.remove('bgBlue')
+  adj2.classList.remove('bgBlue')
+  object.classList.remove('bgBlue')
+  verb.classList.remove('bgBlue')
+  body.classList.remove('bgBlue')
+  rest.classList.remove('bgBlue')
+  plural.classList.remove('bgBlue')
+  theStory.classList.remove('bgBlue')
+}
+
 </script>
 
 </html>

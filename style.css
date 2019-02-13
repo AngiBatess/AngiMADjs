@@ -30,10 +30,15 @@ h3 {
 
 }
 
+#warning { background-color: red;}
+
+.bgBlue {background-color: blue;}
+
 #theStory {
   margin: 0 auto;
   display: block;
   text-align: center;
+  width: auto; 50%;
 }
 
 #submit, #again {
