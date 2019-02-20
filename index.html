@@ -47,7 +47,7 @@
 
 </div>
 <div id="outputPanel">
-  <p>Results..</p>
+  <p>Your Story..</p>
   <section id="theStory"></section>
   <button id="again">Again?</button>
 </div>
@@ -166,17 +166,18 @@
     // story += ". The youngling was not quick enough and the creature ate it's " + body.value + ". The creature did not like the taste and spit it out. Sorry about that, it said. How about I take you to " + rest.value + " it's my treat."
     // story += " Then they became best " + plural.value
 
-    const storyText1 = "This story takes place in " + city.value + ". "
-    const storyText2 = "There was a ripe young " + leastfavfood.value + ". "
-    const storyText3 = "Relaxing on a " + weather.value + " day. "
-    const storyText4 = "When all of a sudden a giant " + adj.value
+    const storyText1 = "This story takes place in " + city.value + ". There was "
+    const storyText2 = "a ripe young " + leastfavfood.value + ". Relaxing on "
+    const storyText3 = "a " + weather.value + " day. When all of a  "
+    const storyText4 = "sudden a giant " + adj.value
     const storyText5 = "" + animal.value + " started running at it! "
-    const storyText6 = "The " + adj2.value
-    const storyText7 = " youngling needed to defend itself so it picked up the nearest things which was a " + object.value + ". "
+    const storyText6 = "The " + adj2.value + " youngling needed to defend itself so it picked "
+    const storyText7 = "up the nearest thing which was a "+ object.value + ". "
     const storyText8 = "As the creature came closer, the youngling started to " + verb.value + ". "
     const storyText9 = "The youngling was not quick enough and the creature ate it's " + body.value + ". "
-    const storyText10 = "The creature did not like the taste and spit it out. Sorry about that, it said. How about I take you to " + rest.value + ". It's my treat. "
-    const storyText11 = "Then they became best " + plural.value + "."
+    const storyText10 = "The creature didn't like the taste and spit it out."
+    const storyText11 = " Sorry about that, it said. How about I take you to " + rest.value
+    const storyText12 = "It's my treat" + " Then they became best " + plural.value + "."
 
     // const newP1 = document.createElement('p')
     // const newP2 = document.createElement('p')
@@ -234,6 +235,7 @@
     addTextNode(storyText9)
     addTextNode(storyText10)
     addTextNode(storyText11)
+    addTextNode(storyText12)
     //theStory.innerHTML = story
 
     inputPanel.className = "displayNone"
