@@ -37,6 +37,9 @@ h3 {
 .bgBlue {background-color: rgb(161, 250, 244);}
 #inputPanel{
   background-image: url(words.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 #outputPanel{
   background-color: rgba(16, 70, 135,.2);
